@@ -1,0 +1,129 @@
+/*----- MEDIA QUERIES -----*/
+@media screen and (min-width: 1024px) {
+  /*----- SCROLLBAR -----*/
+  ::-webkit-scrollbar {
+    width: .7em;
+    height: .7em;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #455499;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #303b6b;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #273057;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*----- GENERAL -----*/
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'main_section';
+  }
+
+  .overlay {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: left .3s;
+  }
+
+  .overlay_open { /* JS */
+    left: 0;
+  }
+
+  .close_btn { /*----- CLOSE SIDEBAR BUTTON -----*/
+    position: fixed;
+    top: 28px;
+    right: -100%;
+    z-index: 4;
+    box-shadow: 0px 0px 5px var(--green-color);
+    transition: right .3s;
+  }
+
+  .show_close_btn { /* JS */
+    right: 20px;
+  }
+
+  .close_btn .burger_icon:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 7.5px;
+  }
+
+  .close_btn .burger_icon:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .close_btn .burger_icon:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: -6.5px;
+  }
+
+  /*----- SIDEBAR -----*/
+  .main_sidebar {
+    width: 280px;
+    position: fixed;
+    z-index: 3;
+    left: -100%;
+    transition: left .3s;
+  }
+
+  .sidebar_open { /* JS */
+    left: 0;
+  }
+
+  /*----- MAIN SECTION -----*/
+  .main_section {
+    overflow: unset;
+  }
+
+  .primary_search {
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+  }
+
+  .burger { /*----- BURGER BUTTON -----*/
+    display: block;
+    width: 45px;
+    padding: 10px 12.5px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: var(--light-green-color);
+  }
+
+  .burger_icon {
+    position: relative;
+    width: 20px;
+    height: 3px;
+    border-radius: 1px;
+    margin: 4px 0;
+    background: var(--white-color);
+    transition: all .1s;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  /*----- SIDEBAR -----*/
+  .main_sidebar {
+    width: 100vw;
+  }
+
+  /*----- MAIN SECTION -----*/
+  .user-name {
+    display: none;
+  }
+
+  .user--margin {
+    margin: 0 10px 0 0;
+  }
+}

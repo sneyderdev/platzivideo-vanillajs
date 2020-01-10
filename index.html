@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PlatziVideo</title>
+    <link rel="shortcut icon" href="images/platzi_favicon.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <!-- Font Awesone Icons -->
+    <script src="https://kit.fontawesome.com/a42ccc6984.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="wrapper" id="home">
+      <div class="grid-container">
+        <!-- Sidebar start -->
+        <aside class="main_sidebar" id="sidebar">
+          <h1 class="logo"> <!-- Logo -->
+            <a href="#" class="logo-link">
+              <figure class="logo-img">
+                <img src="images/platzi_favicon.png" alt="Icono">
+              </figure>
+              Platzi<span>Video</span>
+            </a>
+          </h1>
+          <div class="playlist"> <!-- My Playlist -->
+            <h3 class="playlist-title">My Playlist</h3>
+            <ol class="list" id="playlist">
+              <div class="loader"></div>
+            </ol>
+          </div>
+          <div class="playlist_friend"> <!-- Friends Playlist -->
+            <h3 class="playlist-title">Friends Playlist</h3>
+            <ul class="friends_list" id="friends_list">
+              <div class="loader"></div>
+            </ul>
+          </div>
+        </aside>
+        <!-- Sidebar end -->
+
+        <!-- Main Section start -->
+        <section class="main_section">
+          <div class="primary_search"> <!-- Search -->
+            <div class="burger" id="burger_btn"> <!-- Burger Button  -->
+              <div class="burger_icon"></div>
+              <div class="burger_icon"></div>
+              <div class="burger_icon"></div>
+            </div>
+            <form action="#" class="search_form" id="form">
+              <input type="text" name="movie_name" id="search" placeholder="Search a movie..." class="search_bar">
+            </form>
+            <div class="primary_search-user" id="user">
+              <h3 class="user-name">Sneyder Barreto</h3>
+              <figure class="user user--margin">
+                <img src="images/user.jpg" alt="User Image" class="user-img">
+              </figure>
+              <i class="fas fa-sort-down user-arrow"></i>
+            </div>
+          </div>
+          <div class="primary-list"> <!-- Movies List -->
+            <div class="primaryPlaylist">
+              <h3 class="primaryPlaylist-topic">Fights everywhere</h3>
+              <h2 class="primaryPlaylist-title">Action</h2>
+              <div class="primaryPlaylist-list" id="action">
+                <div class="loader"></div>
+              </div>
+            </div>
+            <div class="primaryPlaylist">
+              <h3 class="primaryPlaylist-topic">Tension everywhere</h3>
+              <h2 class="primaryPlaylist-title">Drama</h2>
+              <div class="primaryPlaylist-list" id="drama">
+                <div class="loader"></div>
+              </div>
+            </div>
+            <div class="primaryPlaylist">
+              <h3 class="primaryPlaylist-topic">Anime everywhere</h3>
+              <h2 class="primaryPlaylist-title">Animation</h2>
+              <div class="primaryPlaylist-list" id="animation">
+                <div class="loader"></div>
+              </div>
+            </div>
+            <div class="primaryPlaylist">
+              <h3 class="primaryPlaylist-topic">Fear everywhere</h3>
+              <h2 class="primaryPlaylist-title">Horror</h2>
+              <div class="primaryPlaylist-list" id="horror">
+                <div class="loader"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Main Section end -->
+      </div>
+    </div>
+
+    <div class="burger close_btn" id="close_btn"> <!-- Close Sidebar Button  -->
+      <div class="burger_icon"></div>
+      <div class="burger_icon"></div>
+      <div class="burger_icon"></div>
+    </div>
+
+    <div class="overlay" id="overlay"></div> <!-- Overlay -->
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>
