@@ -1,5 +1,5 @@
 // APIs
-const MOVIES_API = 'https://yts.lt/api/v2/list_movies.json?genre=name';
+const MOVIES_API = 'https://yts.mx/api/v2/list_movies.json?genre=name';
 const FRIENDS_API = 'https://randomuser.me/api/?results=';
 
 // DOM Elements
